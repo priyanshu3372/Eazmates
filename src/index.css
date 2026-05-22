@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-primary: #25D366;
+  --color-brand-dark: #128C7E;
+  --color-brand-teal: #075E54;
+  --color-brand-light: #DCF8C6;
+  --color-brand-surface: #FFFFFF;
+  --color-brand-alt: #F7FDF9;
+  
+  --color-brand-text-primary: #1F2E26; /* High readability deep teal/gray */
+  --color-brand-text-secondary: #425248;
+  --color-brand-text-light: #708577;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-brand-text-primary bg-brand-surface selection:bg-brand-light;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-brand-teal;
+  }
+}
+
+/* Reusable Micro-animations and Utilities */
+.whatsapp-chat-bubble-received {
+  position: relative;
+  background: white;
+  border-radius: 0px 12px 12px 12px;
+  box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+}
+
+.whatsapp-chat-bubble-sent {
+  position: relative;
+  background: var(--color-brand-light);
+  border-radius: 12px 0px 12px 12px;
+  box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-alt);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-teal);
+}
